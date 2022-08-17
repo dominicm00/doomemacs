@@ -11,7 +11,8 @@
 (package! consult :pin "76aab86015c3d7628dbd5f92b2dd8ab9aeadac8d")
 (package! compat :pin "056e3ccffc716990dcb7b33273453d5fce0402de")
 (package! consult-dir :pin "8abf62df088de87175e98adf8f6f5fb93515004c")
-(when (modulep! :checkers syntax)
+(when (and (modulep! :checkers syntax)
+           (not (modulep! :checkers syntax +flymake)))
   (package! consult-flycheck :pin "9b40f136c017fadf6239d7602d16bf73b4ad5198"))
 
 (package! embark :pin "3add321d7442973413fb92a4052f8d0ad6915829")
